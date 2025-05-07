@@ -4,73 +4,76 @@
 
 This is a *lightweight* webpage framework aimed to be easily implemented at your own website!
 
-It aims to support: 
+It runs on **MPS** or **MUPUS** [(Multipurpose Syntax)](https://sibjor.se/repos/mps)
 
-- Single file implementation
+It aims to provide: 
+
+- Single HTML element implementation
 - Syntax Highlightning
-- Styling modifications
-- Repository listing
-- Index, blog and devlog layouts
+- Website pages [layouts](#models)
+- Configuration
+
+## Installation:
+
+1. In your website root, create a directory named exactly as one of the **[availible models](#models)**
+2. Create a **index.html** in each one of those
+3. Copy the following to **YOUR** root **index.html**:
+```html
+<!-- ADD TO TOP OF HEAD -->
+ <head>
+  <script src="https://sibjor.se/repos/url/script.js"></script>
+```
 ## How it works:
 
-1. You create a directory named "projects" in your project.
-2. In there, create a file named "index.html" and include a link to a script, from *my* site
-3. The linked script then checks for a file named "config.mul"
-4. If not found, it will use the [default.mps](default.mps) config located at *my* site
-5. It will then check if there exists directories containing syntax (inside /repos)
-6. Then, diplay them as projects in index.html similar to Github repositories
+1. The linked script loads as primary element at your first page (root **index.html**).
+2. It then checks for a file named **config.mps** in the same directory
+3. If not found, it will use the default **[config](https://sixten.se/projects/url/default.mps)** located at *my* site
+4. It will then check if there exists directories or and/or files named as one of the [supported models](#models)
+5. Then, diplay your website as preferred
 
+## Work:
+
+- [x] Initialize [Repository](https://github.com/sibjor/url)
+- [x] [README](#readme) first version
+- [ ] Initialize [MUPUS]()
+
+### Models:
+
+(Don't copy the **/** symbol)
+
+- [ ] /projects
+- [ ] /devlog
+- [ ] /blog
+- [ ] /game
+- [ ] /docs
+- [ ] status.html
+- [ ] index.html
+
+## Models Configuration:
+
+First, create **config.mps** in website root directory
+
+Then
+
+### index.html:
+
+### status.html:
+
+### Projects:
+
+```mupus
+***
+```
 - "www.your-site.com/projects" - example url diplaying projects
 - "www.your-site.com/projects/my-repo/" - example url diplaying a project
 - "www.your-site.com/projects/my-repo/code.c" - example url diplaying the syntax of file of a project
 
-### config.mul?
+### Devlog:
 
-**MPS** - "Multipurpose Syntax" - so far a simple markup/config language I created.
+### Blog:
 
-## Implementation:
+### Game:
 
-### Alternative 1 (not tested yet):
-1. Create a directory named "projects" in your directory
-2. Inside, create "index.html"
-3. Copy the following content to **YOUR** index.html inside a directory named "repos":
-```html
-<!-- ADD TO BOTTOM OF BODY -->
-  <script src="https://sibjor.se/url/script.js" defer></script>
-</body>
-```
+### Docs:
 
-### Alternative 2:
-1. Make a fork out of (this repository)[https://github.com/sibjor/url/]
-2. Add your own projects as submodules in the "projects" directory of the fork
-3. Add your fork as a submodule inside your website repository
-
-## Done so far:
-
-### Core:
-[x] Initialize [Repository](https://github.com/sibjor/url/)
-[x] [README](#readme) first version
-
-## In progress:
-
-### Core:
-
-[ ] [Implementation 1](#implementation)
-[ ] MUlang structure
-[ ] Availible at my own website
-
-### Syntax Highlighting:
-[ ] **MPS**
-[ ] **Markdown**
-[ ] **HTML**
-[ ] **CSS**
-[ ] **Javascript**
-[ ] **C**
-[ ] **C++**
-[ ] **C#**
-
-#### Text Formatting:
-
-[ ] **Index**
-[ ] **Blog**
-[ ] **Devlog**
+### Wiki:
